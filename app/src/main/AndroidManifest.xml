@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.scottlogic.dmiley.battleship" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".activities.menu.MainMenu"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.oneplayersolo.OnePlayerSoloEntryActivity"
+            android:label="@string/title_activity_one_player_entry"
+            android:parentActivityName=".activities.menu.MainMenu"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.scottlogic.dmiley.battleship.activities.menu.MainMenu" />
+        </activity>
+        <activity
+            android:name=".activities.oneplayersolo.OnePlayerSoloGameActivity"
+            android:label="@string/title_activity_one_player_game"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.oneplayersolo.OnePlayerSoloPostGameActivity"
+            android:label="@string/title_activity_one_player_post_game"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.twoplayer.TwoPlayerEntryActivity"
+            android:label="@string/title_activity_two_player_pre_game"
+            android:parentActivityName=".activities.menu.MainMenu"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.scottlogic.dmiley.battleship.activities.menu.MainMenu" />
+        </activity>
+        <activity
+            android:name=".activities.twoplayer.TwoPlayerPostGameActivity"
+            android:label="@string/title_activity_two_player_post_game"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.twoplayer.TwoPlayerGameActivity"
+            android:label="@string/title_activity_two_player_game"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.twoplayer.TwoPlayerFleetPlacementActivity"
+            android:label="@string/title_activity_two_player_fleet_placement"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.setting.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.oneplayerversus.OnePlayerVersusEntryActivity"
+            android:label="@string/title_activity_one_player_versus_entry"
+            android:parentActivityName=".activities.menu.MainMenu"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.scottlogic.dmiley.battleship.activities.menu.MainMenu" />
+        </activity>
+        <activity
+            android:name=".activities.oneplayerversus.OnePlayerVersusGameActivity"
+            android:label="@string/title_activity_one_player_versus_game"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.oneplayerversus.OnePlayerVersusPostGameActivity"
+            android:label="@string/title_activity_one_player_versus_post_game"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.oneplayerversus.OnePlayerVersusFleetPlacementActivity"
+            android:label="@string/title_activity_one_player_versus_fleet_placement"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.AITestActivity"
+            android:label="@string/title_activity_aitest"
+            android:parentActivityName=".activities.menu.MainMenu"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.scottlogic.dmiley.battleship.activities.menu.MainMenu" />
+        </activity>
+    </application>
+
+</manifest>

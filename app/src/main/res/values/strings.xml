@@ -1,0 +1,128 @@
+<resources>
+    <string name="app_name">Battleship</string>
+
+    <string name="title_activity_radar">Radar</string>
+    <string name="fire_button">FIRE!</string>
+    <string name="title_activity_ocean">Ocean</string>
+    <string name="place_fleet_button">Place Fleet</string>
+    <string name="ocean_button">Ocean</string>
+    <string name="radar_button">Radar</string>
+    <string-array name="fleet_array">
+        <item>Select Ship</item>
+        <item>Destroyer 2</item>
+        <item>Cruiser 3</item>
+        <item>Submarine 3</item>
+        <item>Battleship 4</item>
+        <item>Aircraft Carrier 5</item>
+    </string-array>
+    <string-array name="booleanArray">
+        <item>True</item>
+        <item>False</item>
+    </string-array>
+    <string-array name="booleanValues">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="difficulties">
+        <item>Cadet</item>
+        <item>Lieutenant</item>
+        <item>Captain</item>
+        <item>Commodore</item>
+        <item>Admiral</item>
+    </string-array>
+    <string-array name="difficultyValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="colorSchemeArray">
+        <item>Green and Black</item>
+        <item>Blue and White</item>
+    </string-array>
+    <string-array name="twoValues">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string name="title_activity_one_player_entry">Enter your name</string>
+    <string name="title_activity_one_player_versus_entry">Enter your name</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="one_player_solo_game_button">New One Player Solo Game</string>
+    <string name="start_game_button">Start Game</string>
+    <string name="title_activity_one_player_game">Take a shot!</string>
+    <string name="finish_game_button">Continue</string>
+    <string name="title_activity_one_player_post_game">Congratulations!</string>
+    <string name="congratulations">Congratulations on sinking the fleet!</string>
+    <string name="return_to_menu_button">Return to Main Menu</string>
+    <string name="play_again_button">Play Again</string>
+    <string name="player_name">Player One</string>
+    <string name="enter_name_prompt">Please enter your preferred name in the box below.</string>
+    <string name="resume_game_one_player_solo_button">Resume One Player Solo Game</string>
+    <string name="title_activity_two_player_pre_game">Enter player information</string>
+    <string name="two_player_game_button">New Two Player Game</string>
+    <string name="title_activity_two_player_between_turns">TwoPlayerBetweenTurnsActivity</string>
+    <string name="title_activity_two_player_post_game">Congratulations!</string>
+    <string name="start_next_turn_button">Next Turn</string>
+    <string name="ready_fire_text">, get ready to aim.</string>
+    <string name="two_player_congratulations_part_one">, Congratulations on sinking</string>
+    <string name="two_player_congratulations_part_two">\'s fleet and winning this game of Battleship!</string>
+    <string name="title_activity_two_player_game">TwoPlayerGameActivity</string>
+    <string name="title_activity_two_player_fleet_placement">TwoPlayerFleetPlacementActivity
+    </string>
+    <string name="title_activity_two_player_first_turn_selection">
+        TwoPlayerFirstTurnSelectionActivity
+    </string>
+    <string name="resume_game_two_player_button">Resume Two Player Game</string>
+    <string name="enter_names_prompt">Please enter your preferred names in the boxes below</string>
+    <string name="player_one_name">Player One</string>
+    <string name="player_two_name">Player Two</string>
+    <string name="continue_game_button">Continue</string>
+    <string name="shot_title_suffix">, it\'s your shot!</string>
+    <string name="place_fleet_title_suffix">, deploying fleet!</string>
+    <string name="fleet_sunk">You sunk the fleet!</string>
+    <string name="sunk">Sunk.</string>
+    <string name="hit">Hit</string>
+    <string name="miss">Miss</string>
+    <string name="radar">Radar</string>
+    <string name="ocean">Ocean</string>
+    <string name="player_two_default_name">Player Two</string>
+    <string name="player_one_default_name">Player One</string>
+    <string name="ready_fire_button">Aim Shot</string>
+    <string name="pass_text">, please pass the device if you have it.</string>
+    <string name="survey_fleet_title_suffix">, surveying fleet!</string>
+    <string name="fleet_placed">Your fleet has been placed</string>
+    <string name="deploy_fleet_button">Deploy Fleet</string>
+    <string name="ready_deploy_text">, get ready to deploy your fleet.</string>
+    <string name="fleet_placement_continue_button">Continue</string>
+    <string name="ready_deploy_title_suffix">, ready to deploy!</string>
+    <string name="fleet_sunk_title_suffix">sank the fleet!</string>
+    <string name="computer_fleet_sunk_title_suffix">Computer sank the fleet!</string>
+    <string name="shot_taken_title_suffix">\'s turn is over</string>
+    <string name="want_to_place_fleet">I want to place my own fleet</string>
+    <string name="dont_want_to_place_fleet">The device can place my fleet for me</string>
+    <string name="settings_button">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="view_ocean">View Ocean</string>
+    <string name="view_radar">View Radar</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="action_save_and_quit"><![CDATA[Save & Quit]]></string>
+    <string name="action_quit">Quit</string>
+    <string name="action_restart">Restart</string>
+    <string name="title_activity_one_player_versus_game">OnePlayerVersusGameActivity</string>
+    <string name="title_activity_one_player_versus_post_game">OnePlayerVersusPostGameActivity
+    </string>
+    <string name="title_activity_one_player_versus_fleet_placement">
+        OnePlayerVersusFleetPlacementActivity
+    </string>
+    <string name="one_player_versus_game_button">New One Player Versus Game</string>
+    <string name="resume_game_one_player_versus_button">Resume One Player Versus Game</string>
+    <string name="commiserations">Commiserations on losing to the computer. Why not have another go?</string>
+    <string name="congratulations_title">Congratulations!</string>
+    <string name="commiserations_title">Commiserations</string>
+    <string name="computer_sunk_fleet">Computer sunk your fleet.</string>
+    <string name="computer_sunk_ship_prefix">"Computer sunk your "</string>
+    <string name="title_activity_aitest">AITestActivity</string>
+    <string name="title_activity_resume_manager">ResumeManagerActivity</string>
+</resources>

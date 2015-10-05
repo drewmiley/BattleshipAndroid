@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainMenu">
+
+    <Button
+        android:id = "@+id/one_player_game_solo_button"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text = "@string/one_player_solo_game_button"
+        android:onClick="onNewOnePlayerSoloGameButtonClicked"/>
+
+    <Button
+        android:layout_below="@+id/one_player_game_solo_button"
+        android:id = "@+id/resume_one_player_solo_game_button"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text = "@string/resume_game_one_player_solo_button"
+        android:onClick="onResumeOnePlayerSoloGameButtonClicked"/>
+
+    <Button
+        android:layout_below = "@+id/resume_one_player_solo_game_button"
+        android:id="@+id/one_player_versus_game_button"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text = "@string/one_player_versus_game_button"
+        android:onClick="onNewOnePlayerVersusGameButtonClicked"/>
+
+    <Button
+        android:layout_below="@+id/one_player_versus_game_button"
+        android:id = "@+id/resume_one_player_versus_game_button"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text = "@string/resume_game_one_player_versus_button"
+        android:onClick="onResumeOnePlayerVersusGameButtonClicked"/>
+
+    <Button
+        android:layout_below="@+id/resume_one_player_versus_game_button"
+        android:id = "@+id/two_player_game_button"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text = "@string/two_player_game_button"
+        android:onClick="onNewTwoPlayerGameButtonClicked"/>
+
+    <Button
+        android:layout_below="@+id/two_player_game_button"
+        android:id = "@+id/resume_two_player_game_button"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text = "@string/resume_game_two_player_button"
+        android:onClick="onResumeTwoPlayerGameButtonClicked"/>
+
+    <Button
+        android:layout_below="@+id/resume_two_player_game_button"
+        android:id = "@+id/settings_button"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text = "@string/settings_button"
+        android:onClick="onSettingsButtonClicked"/>
+
+</RelativeLayout>

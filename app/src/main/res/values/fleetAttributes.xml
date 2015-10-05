@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Fleet">
+
+        <attr name="destroyerForegroundColor" format="color"/>
+        <attr name="cruiserForegroundColor" format="color"/>
+        <attr name="submarineForegroundColor" format="color"/>
+        <attr name="battleshipForegroundColor" format="color"/>
+        <attr name="aircraftCarrierForegroundColor" format="color"/>
+
+    </declare-styleable>
+</resources>

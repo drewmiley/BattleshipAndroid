@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.scottlogic.dmiley.battleship.activities.oneplayerversus.OnePlayerVersusFleetPlacementActivity">
+
+    <Spinner
+        android:id="@+id/fleet_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <com.scottlogic.dmiley.battleship.gridview.FleetPlacementGridView
+        android:id="@+id/versusFleetPlacementGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        custom:gridForegroundColorOne = "#81b5ed"
+        custom:gridForegroundColorTwo = "#81b5ed"
+        custom:gridBorderColor = "#c0c0c0"
+        custom:coordinateLabelForegroundColor = "#ffffff"
+        custom:coordinateLabelBorderColor = "#808080"
+        custom:coordinateLabelTextColor = "#000000"
+        custom:textSizeModifier = "5"
+        custom:defaultBorderPixelSize = "1"
+        custom:validStripSelectedBorderColor = "#00ff00"
+        custom:invalidStripSelectedBorderColor = "#ff0000"
+        custom:destroyerForegroundColor = "#aa65a8"
+        custom:cruiserForegroundColor = "#ea937d"
+        custom:submarineForegroundColor = "#8066ff"
+        custom:battleshipForegroundColor = "#888888"
+        custom:aircraftCarrierForegroundColor = "#347d4e"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <Button
+            android:id="@+id/versus_place_fleet_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="@string/place_fleet_button"
+            android:enabled="false"
+            android:onClick="onPlaceFleetButtonClicked"/>
+
+        <Button
+            android:id="@+id/versus_fleet_placement_continue_game_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fleet_placement_continue_button"
+            android:onClick="onContinueGameButtonClicked"
+            android:visibility="invisible"
+            android:enabled="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>
