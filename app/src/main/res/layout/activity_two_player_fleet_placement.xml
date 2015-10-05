@@ -1,88 +1,88 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:custom="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.scottlogic.dmiley.battleship.activities.twoplayer.TwoPlayerFleetPlacementActivity">
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  xmlns:custom="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:paddingLeft="@dimen/activity_horizontal_margin"
+  android:paddingRight="@dimen/activity_horizontal_margin"
+  android:paddingTop="@dimen/activity_vertical_margin"
+  android:paddingBottom="@dimen/activity_vertical_margin"
+  tools:context="com.scottlogic.dmiley.battleship.activities.twoplayer.TwoPlayerFleetPlacementActivity">
 
-    <TextView
-        android:id="@+id/deploy_fleet_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone" />
+  <TextView
+    android:id="@+id/deploy_fleet_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="gone"/>
+
+  <Button
+    android:id="@+id/deploy_fleet_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    android:text="@string/deploy_fleet_button"
+    android:onClick="onReadyToDeployFleetButtonClicked"/>
+
+  <Spinner
+    android:id="@+id/fleet_spinner"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"/>
+
+  <com.scottlogic.dmiley.battleship.gridview.FleetPlacementGridView
+    android:id="@+id/fleetPlacementGrid"
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    custom:gridForegroundColorOne="#81b5ed"
+    custom:gridForegroundColorTwo="#81b5ed"
+    custom:gridBorderColor="#c0c0c0"
+    custom:coordinateLabelForegroundColor="#ffffff"
+    custom:coordinateLabelBorderColor="#808080"
+    custom:coordinateLabelTextColor="#000000"
+    custom:textSizeModifier="5"
+    custom:defaultBorderPixelSize="1"
+    custom:validStripSelectedBorderColor="#00ff00"
+    custom:invalidStripSelectedBorderColor="#ff0000"
+    custom:destroyerForegroundColor="#aa65a8"
+    custom:cruiserForegroundColor="#ea937d"
+    custom:submarineForegroundColor="#8066ff"
+    custom:battleshipForegroundColor="#888888"
+    custom:aircraftCarrierForegroundColor="#347d4e"/>
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="@android:dimen/notification_large_icon_height"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:id="@+id/countdownTextView"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true"/>
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
 
     <Button
-        android:id="@+id/deploy_fleet_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:text="@string/deploy_fleet_button"
-        android:onClick="onReadyToDeployFleetButtonClicked"/>
+      android:id="@+id/place_fleet_button"
+      android:layout_width="wrap_content"
+      android:layout_height="50dp"
+      android:text="@string/place_fleet_button"
+      android:enabled="false"
+      android:onClick="onPlaceFleetButtonClicked"/>
 
-    <Spinner
-        android:id="@+id/fleet_spinner"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+    <Button
+      android:id="@+id/fleet_placement_continue_game_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/fleet_placement_continue_button"
+      android:onClick="onContinueGameButtonClicked"
+      android:visibility="invisible"
+      android:enabled="false"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentEnd="true"/>
 
-    <com.scottlogic.dmiley.battleship.gridview.FleetPlacementGridView
-        android:id="@+id/fleetPlacementGrid"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        custom:gridForegroundColorOne = "#81b5ed"
-        custom:gridForegroundColorTwo = "#81b5ed"
-        custom:gridBorderColor = "#c0c0c0"
-        custom:coordinateLabelForegroundColor = "#ffffff"
-        custom:coordinateLabelBorderColor = "#808080"
-        custom:coordinateLabelTextColor = "#000000"
-        custom:textSizeModifier = "5"
-        custom:defaultBorderPixelSize = "1"
-        custom:validStripSelectedBorderColor = "#00ff00"
-        custom:invalidStripSelectedBorderColor = "#ff0000"
-        custom:destroyerForegroundColor = "#aa65a8"
-        custom:cruiserForegroundColor = "#ea937d"
-        custom:submarineForegroundColor = "#8066ff"
-        custom:battleshipForegroundColor = "#888888"
-        custom:aircraftCarrierForegroundColor = "#347d4e"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@android:dimen/notification_large_icon_height"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/countdownTextView"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp">
-
-        <Button
-            android:id="@+id/place_fleet_button"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:text="@string/place_fleet_button"
-            android:enabled="false"
-            android:onClick="onPlaceFleetButtonClicked"/>
-
-        <Button
-            android:id="@+id/fleet_placement_continue_game_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/fleet_placement_continue_button"
-            android:onClick="onContinueGameButtonClicked"
-            android:visibility="invisible"
-            android:enabled="false"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-
-    </RelativeLayout>
-
+  </RelativeLayout>
 </LinearLayout>
