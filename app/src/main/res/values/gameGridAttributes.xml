@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="GameGridView">
-
-        <attr name="validCellSelectedBorderColor" format="color"/>
-        <attr name="validCellSelectedBorderAlternateColor" format="color"/>
-        <attr name="invalidCellSelectedBorderColor" format="color"/>
-        <attr name="validCellSelectedForegroundColor" format="color"/>
-        <attr name="validCellSelectedForegroundAlternateColor" format="color"/>
-        <attr name="invalidCellSelectedForegroundColor" format="color"/>
-        <attr name="searchedCellForegroundColor" format="color"/>
-        <attr name="sunkCellFormatColor" format="color"/>
-        <attr name="hitCellFormatColor" format="color"/>
-        <attr name="missCellFormatColor" format="color"/>
-        <attr name="missCellFormatAlternateColor" format="color"/>
-
-    </declare-styleable>
+  <declare-styleable name="GameGridView">
+    <attr name="validCellSelectedBorderColor" format="color"/>
+    <attr name="validCellSelectedBorderAlternateColor" format="color"/>
+    <attr name="invalidCellSelectedBorderColor" format="color"/>
+    <attr name="validCellSelectedForegroundColor" format="color"/>
+    <attr name="validCellSelectedForegroundAlternateColor" format="color"/>
+    <attr name="invalidCellSelectedForegroundColor" format="color"/>
+    <attr name="searchedCellForegroundColor" format="color"/>
+    <attr name="sunkCellFormatColor" format="color"/>
+    <attr name="hitCellFormatColor" format="color"/>
+    <attr name="missCellFormatColor" format="color"/>
+    <attr name="missCellFormatAlternateColor" format="color"/>
+  </declare-styleable>
 </resources>

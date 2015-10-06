@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/github/Battleship/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/github/BattleshipAndroid/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="booleanArray">
-        <item>True</item>
-        <item>False</item>
-    </string-array>
+    <item>True</item>
+    <item>False</item>
+  </string-array>
     <string-array name="booleanValues">
-        <item>1</item>
-        <item>0</item>
-    </string-array>
+    <item>1</item>
+    <item>0</item>
+  </string-array>
     <string-array name="colorSchemeArray">
-        <item>Green and Black</item>
-        <item>Blue and White</item>
-    </string-array>
+    <item>Green and Black</item>
+    <item>Blue and White</item>
+  </string-array>
     <string-array name="difficulties">
-        <item>Cadet</item>
-        <item>Lieutenant</item>
-        <item>Captain</item>
-        <item>Commodore</item>
-        <item>Admiral</item>
-    </string-array>
+    <item>Cadet</item>
+    <item>Lieutenant</item>
+    <item>Captain</item>
+    <item>Commodore</item>
+    <item>Admiral</item>
+  </string-array>
     <string-array name="difficultyValues">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-    </string-array>
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+  </string-array>
     <string-array name="fleet_array">
-        <item>Select Ship</item>
-        <item>Destroyer 2</item>
-        <item>Cruiser 3</item>
-        <item>Submarine 3</item>
-        <item>Battleship 4</item>
-        <item>Aircraft Carrier 5</item>
-    </string-array>
+    <item>Select Ship</item>
+    <item>Destroyer 2</item>
+    <item>Cruiser 3</item>
+    <item>Submarine 3</item>
+    <item>Battleship 4</item>
+    <item>Aircraft Carrier 5</item>
+  </string-array>
     <string-array name="twoValues">
-        <item>1</item>
-        <item>0</item>
-    </string-array>
-    <!-- From: file:/C:/github/Battleship/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
+    <item>1</item>
+    <item>0</item>
+  </string-array>
+    <!-- From: file:/C:/github/BattleshipAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -171,11 +171,11 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/C:/github/Battleship/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/github/BattleshipAndroid/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/C:/github/Battleship/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/github/BattleshipAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
     <item name="dialog_fixed_height_minor" type="dimen">100%</item>
@@ -211,7 +211,7 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/C:/github/Battleship/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/github/BattleshipAndroid/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_quit">Quit</string>
     <string name="action_restart">Restart</string>
@@ -276,21 +276,15 @@
     <string name="title_activity_one_player_game">Take a shot!</string>
     <string name="title_activity_one_player_post_game">Congratulations!</string>
     <string name="title_activity_one_player_versus_entry">Enter your name</string>
-    <string name="title_activity_one_player_versus_fleet_placement">
-        OnePlayerVersusFleetPlacementActivity
-    </string>
+    <string name="title_activity_one_player_versus_fleet_placement">OnePlayerVersusFleetPlacementActivity</string>
     <string name="title_activity_one_player_versus_game">OnePlayerVersusGameActivity</string>
-    <string name="title_activity_one_player_versus_post_game">OnePlayerVersusPostGameActivity
-    </string>
+    <string name="title_activity_one_player_versus_post_game">OnePlayerVersusPostGameActivity</string>
     <string name="title_activity_radar">Radar</string>
     <string name="title_activity_resume_manager">ResumeManagerActivity</string>
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_two_player_between_turns">TwoPlayerBetweenTurnsActivity</string>
-    <string name="title_activity_two_player_first_turn_selection">
-        TwoPlayerFirstTurnSelectionActivity
-    </string>
-    <string name="title_activity_two_player_fleet_placement">TwoPlayerFleetPlacementActivity
-    </string>
+    <string name="title_activity_two_player_first_turn_selection">TwoPlayerFirstTurnSelectionActivity</string>
+    <string name="title_activity_two_player_fleet_placement">TwoPlayerFleetPlacementActivity</string>
     <string name="title_activity_two_player_game">TwoPlayerGameActivity</string>
     <string name="title_activity_two_player_post_game">Congratulations!</string>
     <string name="title_activity_two_player_pre_game">Enter player information</string>
@@ -300,15 +294,15 @@
     <string name="view_ocean">View Ocean</string>
     <string name="view_radar">View Radar</string>
     <string name="want_to_place_fleet">I want to place my own fleet</string>
-    <!-- From: file:/C:/github/Battleship/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/github/BattleshipAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
-    <!-- From: file:/C:/github/Battleship/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/github/BattleshipAndroid/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-    </style>
-    <!-- From: file:/C:/github/Battleship/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
+    <!-- Customize your theme here. -->
+  </style>
+    <!-- From: file:/C:/github/BattleshipAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.Animation.AppCompat.DropDownUp" parent="android:Animation">
         <item name="android:windowEnterAnimation">@anim/abc_grow_fade_in_from_bottom</item>

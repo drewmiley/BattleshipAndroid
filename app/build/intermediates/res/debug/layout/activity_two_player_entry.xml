@@ -1,81 +1,89 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-android:paddingRight="@dimen/activity_horizontal_margin"
-android:paddingTop="@dimen/activity_vertical_margin"
-android:paddingBottom="@dimen/activity_vertical_margin"
-tools:context="com.scottlogic.dmiley.battleship.activities.twoplayer.TwoPlayerEntryActivity">
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:paddingLeft="@dimen/activity_horizontal_margin"
+  android:paddingRight="@dimen/activity_horizontal_margin"
+  android:paddingTop="@dimen/activity_vertical_margin"
+  android:paddingBottom="@dimen/activity_vertical_margin"
+  tools:context="com.scottlogic.dmiley.battleship.activities.twoplayer.TwoPlayerEntryActivity">
 
-    <TextView
-        android:id="@+id/enter_names_prompt"
-        android:text="@string/enter_names_prompt"
+  <TextView
+    android:id="@+id/enter_names_prompt"
+    android:text="@string/enter_names_prompt"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+
+  <EditText
+    android:layout_below="@+id/enter_names_prompt"
+    android:id="@+id/edit_player_one_name"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:maxLength="30"
+    android:hint="@string/player_one_name"
+    android:inputType="text"/>
+
+  <RadioGroup
+    android:layout_below="@+id/edit_player_one_name"
+    android:id="@+id/player_one_fleet_placement_preference"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RadioButton
+      android:id="@+id/player_one_fleet_placement_preference_true"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/want_to_place_fleet"
+      android:onClick="onPlayerOneWantToPlaceFleetButtonClicked"/>
+
+      <RadioButton
+        android:id="@+id/player_one_fleet_placement_preference_false"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <EditText
-        android:layout_below="@+id/enter_names_prompt"
-        android:id="@+id/edit_player_one_name"
-        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:maxLength="30"
-        android:hint="@string/player_one_name"
-        android:inputType="text" />
+        android:text="@string/dont_want_to_place_fleet"
+        android:onClick="onPlayerOneDontWantToPlaceFleetButtonClicked"/>
+  </RadioGroup>
 
-    <RadioGroup
-        android:layout_below="@+id/edit_player_one_name"
-        android:id="@+id/player_one_fleet_placement_preference"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <RadioButton android:id="@+id/player_one_fleet_placement_preference_true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/want_to_place_fleet"
-            android:onClick="onPlayerOneWantToPlaceFleetButtonClicked"/>
-        <RadioButton android:id="@+id/player_one_fleet_placement_preference_false"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/dont_want_to_place_fleet"
-            android:onClick="onPlayerOneDontWantToPlaceFleetButtonClicked"/>
-    </RadioGroup>
+  <EditText
+    android:layout_below="@+id/player_one_fleet_placement_preference"
+    android:id="@+id/edit_player_two_name"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:maxLength="30"
+    android:hint="@string/player_two_name"
+    android:inputType="text"/>
 
-    <EditText
-        android:layout_below="@+id/player_one_fleet_placement_preference"
-        android:id="@+id/edit_player_two_name"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:maxLength="30"
-        android:hint="@string/player_two_name"
-        android:inputType="text" />
+  <RadioGroup
+    android:layout_below="@+id/edit_player_two_name"
+    android:id="@+id/player_two_fleet_placement_preference"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-    <RadioGroup
-        android:layout_below="@+id/edit_player_two_name"
-        android:id="@+id/player_two_fleet_placement_preference"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <RadioButton
-            android:id="@+id/player_two_fleet_placement_preference_true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/want_to_place_fleet"
-            android:onClick="onPlayerTwoWantToPlaceFleetButtonClicked"/>
-        <RadioButton
-            android:id="@+id/player_two_fleet_placement_preference_false"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/dont_want_to_place_fleet"
-            android:onClick="onPlayerTwoDontWantToPlaceFleetButtonClicked"/>
-    </RadioGroup>
+    <RadioButton
+      android:id="@+id/player_two_fleet_placement_preference_true"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/want_to_place_fleet"
+      android:onClick="onPlayerTwoWantToPlaceFleetButtonClicked"/>
 
-    <Button
-        android:layout_below="@+id/player_two_fleet_placement_preference"
-        android:id = "@+id/start_game_button"
-        android:layout_width = "wrap_content"
-        android:layout_height = "wrap_content"
-        android:text = "@string/start_game_button"
-        android:onClick="onStartGameButtonClicked"/>
+    <RadioButton
+      android:id="@+id/player_two_fleet_placement_preference_false"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/dont_want_to_place_fleet"
+      android:onClick="onPlayerTwoDontWantToPlaceFleetButtonClicked"/>
+  </RadioGroup>
+
+<Button
+    android:layout_below="@+id/player_two_fleet_placement_preference"
+    android:id="@+id/start_game_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/start_game_button"
+    android:onClick="onStartGameButtonClicked"/>
 
 </RelativeLayout>
-
-<!-- From: file:/C:/github/Battleship/app/src/main/res/layout/activity_two_player_entry.xml -->
+<!-- From: file:/C:/github/BattleshipAndroid/app/src/main/res/layout/activity_two_player_entry.xml -->
