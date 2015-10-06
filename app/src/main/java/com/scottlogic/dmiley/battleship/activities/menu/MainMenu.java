@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+
 import com.scottlogic.dmiley.battleship.R;
 import com.scottlogic.dmiley.battleship.activities.AITestActivity;
 import com.scottlogic.dmiley.battleship.activities.setting.SettingsActivity;
@@ -16,9 +19,6 @@ import com.scottlogic.dmiley.battleship.activities.oneplayerversus.OnePlayerVers
 import com.scottlogic.dmiley.battleship.activities.twoplayer.TwoPlayerEntryActivity;
 import com.scottlogic.dmiley.battleship.activities.twoplayer.TwoPlayerGameActivity;
 
-import java.io.FileInputStream;
-import java.io.ObjectInputStream;
-
 // Main Menu Activity, application launcher.
 public class MainMenu extends ActionBarActivity {
 
@@ -26,7 +26,6 @@ public class MainMenu extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         // Load layout
         setContentView(R.layout.activity_main_menu);
 
@@ -93,7 +92,6 @@ public class MainMenu extends ActionBarActivity {
 
     // One Player Game button click handler
     public void onNewOnePlayerSoloGameButtonClicked(View view) {
-
         // Start OnePlayerPreGame activity
         Intent intent = new Intent(getApplicationContext(), OnePlayerSoloEntryActivity.class);
         startActivity(intent);
@@ -101,37 +99,29 @@ public class MainMenu extends ActionBarActivity {
 
     // Resume Game button click handler
     public void onResumeOnePlayerSoloGameButtonClicked(View view) {
-
         // Start OnePlayerGame activity
         Intent intent = new Intent(getApplicationContext(), OnePlayerSoloGameActivity.class);
-
         // Boolean to notify of whether we want to resume a previous game
         intent.putExtra("ResumeOnePlayerSoloGame", true);
-
         startActivity(intent);
     }
 
     public void onNewOnePlayerVersusGameButtonClicked(View view) {
-
         // Start OnePlayerPreGame activity
         Intent intent = new Intent(getApplicationContext(), OnePlayerVersusEntryActivity.class);
         startActivity(intent);
     }
 
     public void onResumeOnePlayerVersusGameButtonClicked(View view) {
-
         // Start OnePlayerGame activity
         Intent intent = new Intent(getApplicationContext(), OnePlayerVersusGameActivity.class);
-
         // Boolean to notify of whether we want to resume a previous game
         intent.putExtra("ResumeOnePlayerVersusGame", true);
-
         startActivity(intent);
     }
 
     // New Two Player game button click handler
     public void onNewTwoPlayerGameButtonClicked(View view) {
-
         // Start TwoPlayerPreGame activity
         Intent intent = new Intent(getApplicationContext(), TwoPlayerEntryActivity.class);
         startActivity(intent);
@@ -139,13 +129,10 @@ public class MainMenu extends ActionBarActivity {
 
     // Resume Two Player Game button click handler
     public void onResumeTwoPlayerGameButtonClicked(View view) {
-
         // Start TwoPlayerGame activity
         Intent intent = new Intent(getApplicationContext(), TwoPlayerGameActivity.class);
-
         // Boolean to notify of whether we want to resume a previous game
         intent.putExtra("ResumeTwoPlayerGame", true);
-
         startActivity(intent);
     }
 

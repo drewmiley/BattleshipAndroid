@@ -5,7 +5,7 @@ import java.util.EventObject;
 // Ship Sunk Event
 public class ShipSankEvent extends EventObject {
 
-    public ShipSankEvent(Object source) {
-        super(source);
-    }
+  public ShipSankEvent(Object source) {
+    super(source);
+  }
 }
