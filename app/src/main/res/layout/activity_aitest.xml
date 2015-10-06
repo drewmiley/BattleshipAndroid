@@ -1,82 +1,86 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.scottlogic.dmiley.battleship.activities.AITestActivity">
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:paddingLeft="@dimen/activity_horizontal_margin"
+  android:paddingRight="@dimen/activity_horizontal_margin"
+  android:paddingTop="@dimen/activity_vertical_margin"
+  android:paddingBottom="@dimen/activity_vertical_margin"
+  tools:context="com.scottlogic.dmiley.battleship.activities.AITestActivity">
 
-    <Button
-        android:id = "@+id/test_cadet_ai_button"
-        android:layout_width = "wrap_content"
-        android:layout_height = "wrap_content"
-        android:text = "Cadet Test"
-        android:onClick="onCadetTestButtonClicked"/>
+  <Button
+    android:id="@+id/test_cadet_ai_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Cadet Test"
+    android:onClick="onCadetTestButtonClicked"/>
 
-    <TextView
-        android:layout_below="@id/test_cadet_ai_button"
-        android:id="@+id/test_cadet_textview"
-        android:text = "Cadet Test Value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+  <TextView
+    android:layout_below="@id/test_cadet_ai_button"
+    android:id="@+id/test_cadet_textview"
+    android:text="Cadet Test Value"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
 
-    <Button
-        android:layout_below="@+id/test_cadet_textview"
-        android:id = "@+id/test_lieutenant_ai_button"
-        android:layout_width = "wrap_content"
-        android:layout_height = "wrap_content"
-        android:text = "Lieutenant Test"
-        android:onClick="onLieutenantTestButtonClicked"/>
+  <Button
+    android:layout_below="@+id/test_cadet_textview"
+    android:id="@+id/test_lieutenant_ai_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Lieutenant Test"
+    android:onClick="onLieutenantTestButtonClicked"/>
 
-    <TextView
-        android:layout_below="@id/test_lieutenant_ai_button"
-        android:id="@+id/test_lieutenant_textview"
-        android:text = "Lieutenant Test Value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+  <TextView
+    android:layout_below="@id/test_lieutenant_ai_button"
+    android:id="@+id/test_lieutenant_textview"
+    android:text="Lieutenant Test Value"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
 
-    <Button
-        android:layout_below="@+id/test_lieutenant_textview"
-        android:id = "@+id/test_captain_ai_button"
-        android:layout_width = "wrap_content"
-        android:layout_height = "wrap_content"
-        android:text = "Captain Test"
-        android:onClick="onCaptainTestButtonClicked"/>
+  <Button
+    android:layout_below="@+id/test_lieutenant_textview"
+    android:id="@+id/test_captain_ai_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Captain Test"
+    android:onClick="onCaptainTestButtonClicked"/>
 
-    <TextView
-        android:layout_below="@id/test_captain_ai_button"
-        android:id="@+id/test_captain_textview"
-        android:text = "Captain Test Value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+  <TextView
+    android:layout_below="@id/test_captain_ai_button"
+    android:id="@+id/test_captain_textview"
+    android:text="Captain Test Value"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
 
-    <Button
-        android:layout_below="@+id/test_captain_textview"
-        android:id = "@+id/test_commodore_ai_button"
-        android:layout_width = "wrap_content"
-        android:layout_height = "wrap_content"
-        android:text = "Commodore Test"
-        android:onClick="onCommodoreTestButtonClicked"/>
+  <Button
+    android:layout_below="@+id/test_captain_textview"
+    android:id="@+id/test_commodore_ai_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Commodore Test"
+    android:onClick="onCommodoreTestButtonClicked"/>
 
-    <TextView
-        android:layout_below="@id/test_commodore_ai_button"
-        android:id="@+id/test_commodore_textview"
-        android:text = "Commodore Test Value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+  <TextView
+    android:layout_below="@id/test_commodore_ai_button"
+    android:id="@+id/test_commodore_textview"
+    android:text="Commodore Test Value"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
 
-    <Button
-        android:layout_below="@+id/test_commodore_textview"
-        android:id = "@+id/test_admiral_ai_button"
-        android:layout_width = "wrap_content"
-        android:layout_height = "wrap_content"
-        android:text = "Admiral Test"
-        android:onClick="onAdmiralTestButtonClicked"/>
+  <Button
+    android:layout_below="@+id/test_commodore_textview"
+    android:id="@+id/test_admiral_ai_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Admiral Test"
+    android:onClick="onAdmiralTestButtonClicked"/>
 
-    <TextView
-        android:layout_below="@id/test_admiral_ai_button"
-        android:id="@+id/test_admiral_textview"
-        android:text = "Admiral Test Value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+  <TextView
+    android:layout_below="@id/test_admiral_ai_button"
+    android:id="@+id/test_admiral_textview"
+    android:text="Admiral Test Value"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+
 </RelativeLayout>

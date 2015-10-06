@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="BattleshipGridView">
-
-        <attr name="gridForegroundColorOne" format="color"/>
-        <attr name="gridForegroundColorTwo" format="color"/>
-        <attr name="gridBorderColor" format="color"/>
-        <attr name="coordinateLabelForegroundColor" format="color"/>
-        <attr name="coordinateLabelBorderColor" format="color"/>
-        <attr name="coordinateLabelTextColor" format="color"/>
-        <attr name="gridForegroundAlternateColorOne" format="color"/>
-        <attr name="gridForegroundAlternateColorTwo" format="color"/>
-        <attr name="gridBorderAlternateColor" format="color"/>
-        <attr name="coordinateLabelForegroundAlternateColor" format="color"/>
-        <attr name="coordinateLabelBorderAlternateColor" format="color"/>
-        <attr name="coordinateLabelTextAlternateColor" format="color"/>
-        <attr name="textSizeModifier" format="integer"/>
-        <attr name="defaultBorderPixelSize" format="integer"/>
-
-    </declare-styleable>
+  <declare-styleable name="BattleshipGridView">
+    <attr name="gridForegroundColorOne" format="color"/>
+    <attr name="gridForegroundColorTwo" format="color"/>
+    <attr name="gridBorderColor" format="color"/>
+    <attr name="coordinateLabelForegroundColor" format="color"/>
+    <attr name="coordinateLabelBorderColor" format="color"/>
+    <attr name="coordinateLabelTextColor" format="color"/>
+    <attr name="gridForegroundAlternateColorOne" format="color"/>
+    <attr name="gridForegroundAlternateColorTwo" format="color"/>
+    <attr name="gridBorderAlternateColor" format="color"/>
+    <attr name="coordinateLabelForegroundAlternateColor" format="color"/>
+    <attr name="coordinateLabelBorderAlternateColor" format="color"/>
+    <attr name="coordinateLabelTextAlternateColor" format="color"/>
+    <attr name="textSizeModifier" format="integer"/>
+    <attr name="defaultBorderPixelSize" format="integer"/>
+  </declare-styleable>
 </resources>
