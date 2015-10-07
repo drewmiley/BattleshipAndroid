@@ -5,7 +5,7 @@ import java.util.EventObject;
 // Changed Selection Event
 public class SelectionChangedEvent extends EventObject {
 
-    public SelectionChangedEvent(Object source) {
-        super(source);
-    }
+  public SelectionChangedEvent(Object source) {
+    super(source);
+  }
 }

@@ -16,6 +16,7 @@ public class StripArrayAdaptor extends ArrayAdapter<CharSequence> {
 
     private Context context;
     private int support_simple_spinner_dropdown_item;
+
     private String[] textValues;
     private int[] colorValues;
 
@@ -28,8 +29,7 @@ public class StripArrayAdaptor extends ArrayAdapter<CharSequence> {
     }
 
     @Override
-    public View getDropDownView(int position, View convertView,
-                                ViewGroup parent) {
+    public View getDropDownView(int position, View convertView, ViewGroup parent) {
         return getView(position, convertView, parent);
     }
 
@@ -45,7 +45,6 @@ public class StripArrayAdaptor extends ArrayAdapter<CharSequence> {
             label.setTextColor(Color.WHITE);
             row.setBackgroundColor(colorValues[position - 1]);
         }
-
         return row;
     }
 }

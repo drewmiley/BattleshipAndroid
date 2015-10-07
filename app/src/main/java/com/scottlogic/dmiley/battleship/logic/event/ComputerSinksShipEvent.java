@@ -5,7 +5,7 @@ import java.util.EventObject;
 
 public class ComputerSinksShipEvent extends EventObject {
 
-    public ComputerSinksShipEvent(Object source) {
-        super(source);
-    }
+  public ComputerSinksShipEvent(Object source) {
+    super(source);
+  }
 }

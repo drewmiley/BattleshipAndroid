@@ -1,14 +1,13 @@
 package com.scottlogic.dmiley.battleship.logic;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
 import com.scottlogic.dmiley.battleship.gridview.fleet.Fleet;
 import com.scottlogic.dmiley.battleship.gridview.fleet.Strip;
 import com.scottlogic.dmiley.battleship.logic.oceantools.CellType;
 import com.scottlogic.dmiley.battleship.logic.oceantools.Orientation;
 import com.scottlogic.dmiley.battleship.util.GridLocation;
 
+import android.os.Parcel;
+import android.os.Parcelable;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,39 +15,35 @@ import java.util.List;
 // Models the fleet placement onto the ocean
 public class OceanModel implements Parcelable, Serializable {
 
-	private static final int ORIENTATIONS_POSSIBLE = 4;
-	
-	private static final int GRID_SIZE = 10;
-	
 	private CellType[][] cellTypeGrid;
-
 	private int shipTotal;
-
 	private CellType sea;
-
 	private List <CellType> ships;
-	
+
+	private static final int ORIENTATIONS_POSSIBLE = 4;
+	private static final int GRID_SIZE = 10;
+
 	public OceanModel() {
-        sea = new CellType(0, false, "sea", 1);
+	  sea = new CellType(0, false, "sea", 1);
 
-        CellType destroyer = new CellType(1, true, "Destroyer", 2);
-        CellType cruiser = new CellType(2, true, "Cruiser", 3);
-        CellType submarine = new CellType(3, true, "Submarine", 3);
-        CellType battleship = new CellType(4, true, "Battleship", 4);
-        CellType aircraftCarrier = new CellType(5, true, "Aircraft Carrier", 5);
+	  CellType destroyer = new CellType(1, true, "Destroyer", 2);
+	  CellType cruiser = new CellType(2, true, "Cruiser", 3);
+	  CellType submarine = new CellType(3, true, "Submarine", 3);
+	  CellType battleship = new CellType(4, true, "Battleship", 4);
+	  CellType aircraftCarrier = new CellType(5, true, "Aircraft Carrier", 5);
 
-        ships = new ArrayList<>();
-        ships.add(destroyer);
-        ships.add(cruiser);
-        ships.add(submarine);
-        ships.add(battleship);
-        ships.add(aircraftCarrier);
+	  ships = new ArrayList<>();
+	  ships.add(destroyer);
+	  ships.add(cruiser);
+	  ships.add(submarine);
+	  ships.add(battleship);
+	  ships.add(aircraftCarrier);
 
 		cellTypeGrid = new CellType[GRID_SIZE + 1][GRID_SIZE + 1];
 		shipTotal = 0;
 
 		newAutomaticSetup();
-    }
+  }
 
 	public OceanModel(Fleet fleet) {
 		sea = new CellType(0, false, "sea", 1);
@@ -73,20 +68,20 @@ public class OceanModel implements Parcelable, Serializable {
 	}
 
 	public OceanModel(Parcel in) {
-        int row;
-        int column;
+    int row;
+    int column;
 
-        cellTypeGrid = new CellType[GRID_SIZE + 1][GRID_SIZE + 1];
-        shipTotal = in.readInt();
+    cellTypeGrid = new CellType[GRID_SIZE + 1][GRID_SIZE + 1];
+    shipTotal = in.readInt();
 
-        for (int i = 0; i < (GRID_SIZE + 1)*(GRID_SIZE + 1); i++) {
-            row = i / (GRID_SIZE + 1);
-            column = i % (GRID_SIZE + 1);
-            if (row > 0 && column > 0) {
-                cellTypeGrid[row][column] = in.readParcelable(CellType.class.getClassLoader());
-            }
-        }
+    for (int i = 0; i < (GRID_SIZE + 1)*(GRID_SIZE + 1); i++) {
+      row = i / (GRID_SIZE + 1);
+      column = i % (GRID_SIZE + 1);
+      if (row > 0 && column > 0) {
+        cellTypeGrid[row][column] = in.readParcelable(CellType.class.getClassLoader());
+      }
     }
+  }
 
 	public CellType getPoint(GridLocation coordinate) {
 		return cellTypeGrid[coordinate.getRow()][coordinate.getColumn()];
@@ -120,7 +115,7 @@ public class OceanModel implements Parcelable, Serializable {
 			CellType ship = ships.get(i);
 			addManualCellType(ship, strip);
 		}
-        addOpenSea();
+    addOpenSea();
 	}
 
 	// Adds sea once the fleet has been placed
@@ -138,31 +133,30 @@ public class OceanModel implements Parcelable, Serializable {
 	// Generates and checks placement, and then places a selected CellType at the start of the game
 	private void addAutomaticCellType(CellType cellType) {
 		int[] randomData = randomData();
-        GridLocation coordinate = new GridLocation(randomData[1], randomData[2]);
-        Orientation orientation = new Orientation(randomData[0]);
+    GridLocation coordinate = new GridLocation(randomData[1], randomData[2]);
+    Orientation orientation = new Orientation(randomData[0]);
 
-        while (!canPlaceCellType(coordinate, orientation, cellType)) {
-            randomData = randomData();
-            coordinate = new GridLocation(randomData[1], randomData[2]);
-            orientation = new Orientation(randomData[0]);
-        }
+    while (!canPlaceCellType(coordinate, orientation, cellType)) {
+      randomData = randomData();
+      coordinate = new GridLocation(randomData[1], randomData[2]);
+      orientation = new Orientation(randomData[0]);
+    }
 
-        placeCellType(coordinate, orientation, cellType);
-        increaseShipTotalByOne();
+    placeCellType(coordinate, orientation, cellType);
+    increaseShipTotalByOne();
 	}
 
 	private void addManualCellType(CellType cellType, Strip strip) {
-        GridLocation coordinate = strip.getLocation()[0];
+    GridLocation coordinate = strip.getLocation()[0];
+    Orientation orientation;
+    if (strip.isHorizontal()) {
+      orientation = new Orientation(Orientation.HORIZONTAL_POSITIVE_ITERATOR);
+    } else {
+      orientation = new Orientation(Orientation.VERTICAL_POSITIVE_ITERATOR);
+    }
 
-        Orientation orientation;
-        if (strip.isHorizontal()) {
-            orientation = new Orientation(Orientation.HORIZONTAL_POSITIVE_ITERATOR);
-        } else {
-            orientation = new Orientation(Orientation.VERTICAL_POSITIVE_ITERATOR);
-        }
-
-        placeCellType(coordinate, orientation, cellType);
-        increaseShipTotalByOne();
+    placeCellType(coordinate, orientation, cellType);
+    increaseShipTotalByOne();
 	}
 
 	// Checks whether a CellType can be placed in a certain position on the grid
@@ -184,7 +178,8 @@ public class OceanModel implements Parcelable, Serializable {
 	// Places CellTypes onto the grid
 	private void placeCellType(GridLocation coordinate, Orientation orientation, CellType cellType) {
 		for (int i = 0 ; i < cellType.getLength(); i++) {
-			GridLocation placeGridLocation = new GridLocation(coordinate.getRow() + i * orientation.getRowIterator(), coordinate.getColumn() + i * orientation.getColumnIterator());
+			GridLocation placeGridLocation = new GridLocation(coordinate.getRow() + i * orientation.getRowIterator(),
+			  coordinate.getColumn() + i * orientation.getColumnIterator());
 			setPoint(placeGridLocation, cellType);
 		}
 	}
@@ -195,37 +190,34 @@ public class OceanModel implements Parcelable, Serializable {
 		randomData[0] = (int) (Math.random() * ORIENTATIONS_POSSIBLE);
 		randomData[1] = (int) Math.ceil((Math.random() * GRID_SIZE));
 		randomData[2] = (int) Math.ceil((Math.random() * GRID_SIZE));
-
 		return randomData;
 	}
 
-    public int describeContents(){
-        return 0;
+  public int describeContents(){
+    return 0;
+  }
+
+  @Override
+  public void writeToParcel(Parcel dest, int flags) {
+    int row;
+    int column;
+    dest.writeInt(shipTotal);
+
+    for (int i = 0; i < (GRID_SIZE + 1)*(GRID_SIZE + 1); i++) {
+      row = i / (GRID_SIZE + 1);
+      column = i % (GRID_SIZE + 1);
+      if (row > 0 && column > 0) {
+        dest.writeParcelable(cellTypeGrid[row][column], flags);
+      }
     }
+  }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        int row;
-        int column;
-        dest.writeInt(shipTotal);
-
-        for (int i = 0; i < (GRID_SIZE + 1)*(GRID_SIZE + 1); i++) {
-            row = i / (GRID_SIZE + 1);
-            column = i % (GRID_SIZE + 1);
-            if (row > 0 && column > 0) {
-                dest.writeParcelable(cellTypeGrid[row][column], flags);
-            }
-        }
+  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
+    public OceanModel createFromParcel(Parcel in) {
+      return new OceanModel(in);
     }
-
-    public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
-
-        public OceanModel createFromParcel(Parcel in) {
-            return new OceanModel(in);
-        }
-
-        public OceanModel[] newArray(int size) {
-            return new OceanModel[size];
-        }
-    };
+    public OceanModel[] newArray(int size) {
+      return new OceanModel[size];
+    }
+  };
 }
