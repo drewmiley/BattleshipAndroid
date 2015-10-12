@@ -38,6 +38,7 @@
     custom:gridForegroundColorOne="#81b5ed"
     custom:gridForegroundColorTwo="#81b5ed"
     custom:gridBorderColor="#c0c0c0"
+    custom:addShipButtonColor="#ff0000"
     custom:coordinateLabelForegroundColor="#ffffff"
     custom:coordinateLabelBorderColor="#808080"
     custom:coordinateLabelTextColor="#000000"

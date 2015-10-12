@@ -18,6 +18,7 @@ import java.util.List;
 // Display a touchable Battleship Ocean
 public class FleetPlacementGridView extends BattleshipGridView {
 
+  private int addShipButtonColor;
   private int validStripSelectedBorderColor;
   private int invalidStripSelectedBorderColor;
   private int[] stripColors;
@@ -37,6 +38,7 @@ public class FleetPlacementGridView extends BattleshipGridView {
     // Initialise colors of selected strip highlight
     TypedArray typedArray = context.getTheme().obtainStyledAttributes(attributeSet, R.styleable.FleetPlacementGridView, 0, 0);
     try {
+      addShipButtonColor = typedArray.getInteger(R.styleable.FleetPlacementGridView_addShipButtonColor, 0);
       validStripSelectedBorderColor = typedArray.getInteger(R.styleable.FleetPlacementGridView_validStripSelectedBorderColor, 0);
       invalidStripSelectedBorderColor = typedArray.getInteger(R.styleable.FleetPlacementGridView_invalidStripSelectedBorderColor, 0);
     } finally {
@@ -283,6 +285,7 @@ public class FleetPlacementGridView extends BattleshipGridView {
       drawCoordinateLabel(canvas);
     }
 
+    drawAddShipButtonForeground(canvas);
     drawGridBorder(canvas);
 
     drawDefaultGridBorder(canvas);
@@ -350,6 +353,14 @@ public class FleetPlacementGridView extends BattleshipGridView {
         drawCellForeground(canvas, gridLocation, paint);
       }
     }
+  }
+
+  // Draw (0,0) add ship button
+  private void drawAddShipButtonForeground(Canvas canvas) {
+    Paint paint = new Paint();
+    paint.setColor(addShipButtonColor);
+    GridLocation gridLocation = new GridLocation(0, 0);
+    drawCellForeground(canvas, gridLocation, paint);
   }
 
   // Draw border of selected strip to indicate validity

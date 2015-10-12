@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <declare-styleable name="FleetPlacementGridView">
+    <attr name="addShipButtonColor" format="color"/>
     <attr name="validStripSelectedBorderColor" format="color"/>
     <attr name="invalidStripSelectedBorderColor" format="color"/>
   </declare-styleable>

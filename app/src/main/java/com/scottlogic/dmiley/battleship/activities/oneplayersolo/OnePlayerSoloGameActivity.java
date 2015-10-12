@@ -232,9 +232,9 @@ public class OnePlayerSoloGameActivity extends ActionBarActivity implements Sele
   // Called when shot is taken and ship not sunk
   private void shipHit() {
     boolean hit = onePlayerRadar.getCurrentGuessCellType().getIsShip();
-    String toastText =  playerRadar.getCurrentGuessCellType().getIsShip() ?
+    String toastText =  onePlayerRadar.getCurrentGuessCellType().getIsShip() ?
       getString(R.string.hit) : getString(R.string.miss);
-    toast.setText(toastText)
+    toast.setText(toastText);
     toast.show();
     updateUI();
   }

@@ -513,7 +513,7 @@ public class TwoPlayerGameActivity extends ActionBarActivity implements SensorEv
       hit = playerTwoRadar.getCurrentGuessCellType().getIsShip();
     }
     String toastText = hit ? getString(R.string.hit) : getString(R.string.miss);
-    toastText.setText(toastText);
+    toast.setText(toastText);
     toast.show();
     updateUI();
   }
