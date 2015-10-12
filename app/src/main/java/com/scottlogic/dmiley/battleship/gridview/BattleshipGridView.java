@@ -239,7 +239,7 @@ public class BattleshipGridView extends View {
   // Redraws a cell foreground
   protected void redrawCellForeground(GridLocation cell) {
     int columnGridBorder = cell.getColumn() == 0 ? defaultBorderPixelSize : 2 * defaultBorderPixelSize;
-    int rowGridBorder = cell.getRow() ? defaultBorderPixelSize : 2 * defaultBorderPixelSize;
+    int rowGridBorder = cell.getRow() == 0 ? defaultBorderPixelSize : 2 * defaultBorderPixelSize;
 
     int westExtremity = cell.getColumn() * measuredGridSquareLength + columnGridBorder + measuredGridBorderLength;
     int northExtremity = cell.getRow() * measuredGridSquareLength + rowGridBorder + measuredGridBorderLength;
@@ -251,7 +251,7 @@ public class BattleshipGridView extends View {
   // Redraws a cell border
   protected void redrawCellBorder(GridLocation cell) {
     int columnGridBorder = cell.getColumn() == 0 ? defaultBorderPixelSize : 2 * defaultBorderPixelSize;
-    int rowGridBorder = cell.getRow() ? defaultBorderPixelSize : 2 * defaultBorderPixelSize;
+    int rowGridBorder = cell.getRow() == 0 ? defaultBorderPixelSize : 2 * defaultBorderPixelSize;
     int columnPixel = cell.getColumn() * measuredGridSquareLength;
     int rowPixel = cell.getRow() * measuredGridSquareLength;
     // North Cell Border
