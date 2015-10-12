@@ -239,7 +239,7 @@ public class FleetPlacementGridView extends BattleshipGridView {
       return new GridLocation[]{new GridLocation(touchedCell.getRow(), columnStart), new GridLocation(touchedCell.getRow(), columnStart + fleet.getActiveStrip().getLength() - 1)};
     } else {
       int columnEnd = touchedCell.getColumn() + (int) ((fleet.getActiveStrip().getLength() - 1) / 2);
-      columnEnd = columnEnd <= GRID_SIZE ? : columnEnd : GRID_SIZE;
+      columnEnd = columnEnd <= GRID_SIZE ? columnEnd : GRID_SIZE;
       return new GridLocation[]{new GridLocation(touchedCell.getRow(), columnEnd - fleet.getActiveStrip().getLength() + 1), new GridLocation(touchedCell.getRow(), columnEnd)};
     }
   }
@@ -252,7 +252,7 @@ public class FleetPlacementGridView extends BattleshipGridView {
       return new GridLocation[]{new GridLocation(rowStart, touchedCell.getColumn()), new GridLocation(rowStart + fleet.getActiveStrip().getLength() - 1, touchedCell.getColumn())};
     } else {
       int rowEnd = touchedCell.getRow() + (int) ((fleet.getActiveStrip().getLength() - 1) / 2);
-      rowEnd = rowEnd <= GRID_SIZE ? columnEnd : GRID_SIZE;
+      rowEnd = rowEnd <= GRID_SIZE ? rowEnd : GRID_SIZE;
       return new GridLocation[]{new GridLocation(rowEnd - fleet.getActiveStrip().getLength() + 1, touchedCell.getColumn()), new GridLocation(rowEnd, touchedCell.getColumn())};
     }
   }
